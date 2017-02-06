@@ -1,0 +1,11 @@
+click==6.7
+Django==1.10.5
+Flask==0.12
+itsdangerous==0.24
+Jinja2==2.9.5
+MarkupSafe==0.23
+Werkzeug==0.11.15
+ Pip install “” installs program
+Pip show “” shows program and information version/etc..
+Pip freeze shows version
+Pip uninstall “” uninstalls program pip search “” searches program functions 
