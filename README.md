@@ -25,6 +25,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [Flask - Session & POST Data](https://www.youtube.com/watch?v=ue4xuCplDJ0 "Flask - Session & POST Data") <br>
 [Flask - Forms & Hidden Inputs](https://www.youtube.com/watch?v=2Dl5iWPH9Do "Flask - Forms & Hidden Inputs") <br>
 [Flask - Ninja Gold](https://www.youtube.com/watch?v=y9ud060bhhI "Flask - Ninja Gold") <br>
+[MySQL Workbench - ERDs & Queries](https://youtu.be/lDbMPBhMFWE "MySQL Workbench - ERDs & Queries")<br>
 
 
 # Schedule
