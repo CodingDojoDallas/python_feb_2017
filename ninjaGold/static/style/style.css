@@ -1,0 +1,17 @@
+#container h4{
+  display: inline-block;
+}
+
+form {
+  width: 20%;
+  display: inline-block;
+  border: 2px solid black;
+  text-align: center;
+}
+p {
+
+  width: 90%;
+}
+#activities {
+  width: 90%;
+}
