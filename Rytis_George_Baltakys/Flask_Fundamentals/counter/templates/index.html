@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter (session)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1>Counter (session)</h1>
+	<p>{{ count }} timers</p>
+	<form action="" method="POST">
+		<button type="submit" name="ninja" value="ninja">Ninja</button>
+		<button type="submit" name="hacker" value="hacker">Hacker</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Dojo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1>Welcome to the Coding Dojo!</h1>
+	<p>Please take this quick survey</p>
+	<form action="result" method="POST">
+		<label>
+			Your Name: <input type="text" name="name">
+		</label>
+		<div>
+			<label>
+				Dojo Location:
+				<select name="dojo">
+					<option value="San Jose">San Jose</option>
+					<option value="Washington DC">Washington DC</option>
+					<option value="Seattle">Seattle</option>
+					<option value="Chicago">Chicago</option>
+					<option value="Dallas">Dallas</option>
+					<option value="Berkely">Berkely</option>
+					<option value="Orange County">Orange County</option>
+				</select>
+			</label>
+		</div>
+		<div>
+			<label>
+				Favorite language:
+				<select name="language">
+					<option value="Python">Python</option>
+					<option value="JavaScript">JavaScript</option>
+					<option value="Ruby">Ruby</option>
+					<option value="Java">Java</option>
+					<option value="PHP">PHP</option>
+				</select>
+			</label>
+		</div>
+			<label>
+				Comment (optional)
+				<div>
+					<textarea name="comment" rows="5" cols="50"></textarea>
+				</div>
+			</label>
+			<button type="submit">Submit</button>
+		</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Dojo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1>Welcome to the Coding Dojo!</h1>
+	<h2>Submitted Info</h2>
+	<p>
+		Name: {{ name }}
+	</p>
+	<p>
+		Dojo Location: {{ dojo }}
+	</p>
+	<p>
+		Favorite language: {{ language }}
+	</p>
+	<p>
+		Comment: {{ comment }}
+	</p>
+	<a href="/"><button>Go Back</button></a>
+</body>
+</html>

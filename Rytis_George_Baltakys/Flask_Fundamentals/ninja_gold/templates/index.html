@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninja Gold</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1>Ninja <span class='gold'>Gold</span></h1>
+	<p>Your Gold:
+		{% if session['gold'] >= 0 %}
+			<span class='gold'>{{ session['gold'] }}</span></p>
+		{% else %}
+			<span class='loss'>{{ session['gold'] }}</span></p>
+		{% endif %}
+	</p>
+	<form action="/process" method="POST">
+			<div>
+				<h2>Farm</h2>
+				<p>(earns 10-20 gold)</p>
+				<button type="submit" name="farm" value="farm">Find Gold!</button>
+					{% if session['where'] == 'farm' %}
+						<p>Win: <span class='gold'>{{ session['win'] }}</span></p>
+					{% endif %}
+			</div>
+			<div>
+				<h2>Cave</h2>
+				<p>(earns 5-10 gold)</p>
+				<button type="submit" name="cave" value="cave">Find Gold!</button>
+					{% if session['where'] == 'cave' %}
+						<p>Win: <span class='gold'>{{ session['win'] }}</span></p>
+					{% endif %}
+			</div>
+			<div>
+				<h2>House</h2>
+				<p>(earns 2-5 gold)</p>
+				<button type="submit" name="house" value="house">Find Gold!</button>
+				{% if session['where'] == 'house' %}
+					<p>Win: <span class='gold'>{{ session['win'] }}</span></p>
+				{% endif %}
+			</div>
+			<div>
+				<h2>Casino</h2>
+				<p>(earns/takes 0-50 gold)</p>
+				<button type="submit" name="casino" value="casino">Find Gold!</button>
+				{% if session['where'] == 'casino' %}
+					{% if session['win'] > 0 %}
+						<p>Win: <span class='gold'>{{ session['win'] }}</span></p>
+					{% else %}
+						<p>Loss: <span class='loss'>{{ session['win'] * -1 }}</span></p>
+					{% endif %}
+				{% endif %}
+			</div>
+			<p>
+				<button type="submit" name="reset" value="reset">Reset Game</button>
+			</p>
+	</form>
+	Activities:
+	<div id='activities'>
+		{% for o in session['output'] %}
+			{{ o|safe }}
+		{% endfor %}
+	</div>
+</body>
+</html>
