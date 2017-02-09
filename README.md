@@ -19,6 +19,14 @@ Please commit daily. That way we can provide you with feedback :) or just a thum
 
 https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.pdf
 
+# Videos
+[Intro to Python](https://www.youtube.com/watch?v=aSOXz-o6qBo "Intro to Python") <br>
+[Flask - Intro and Set Up](https://www.youtube.com/watch?v=0B91ls_C5mU "Flask - Intro and Set Up") <br>
+[Flask - Session & POST Data](https://www.youtube.com/watch?v=ue4xuCplDJ0 "Flask - Session & POST Data") <br>
+[Flask - Forms & Hidden Inputs](https://www.youtube.com/watch?v=2Dl5iWPH9Do "Flask - Forms & Hidden Inputs") <br>
+[Flask - Ninja Gold](https://www.youtube.com/watch?v=y9ud060bhhI "Flask - Ninja Gold") <br>
+
+
 # Schedule
 
 **Daily Cadence:**
@@ -56,6 +64,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 
 ### Morning
 **Lecture** - Hidden Inputs + Flash Messages
+
 **Group Activity** - Flask Olympics
 
 ### Afternoon
