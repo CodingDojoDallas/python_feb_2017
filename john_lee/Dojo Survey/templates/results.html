@@ -1,0 +1,18 @@
+<html>
+    <head>
+       <title>Form Test Index</title>
+       <link rel='stylesheet' tye='type/css' href="{{url_for('static', filename='dsstyle2.css')}}">
+    </head>
+    <body>
+      <div id="centerbox">
+        <h2>Submitted Info</h2>
+        <h4>Name:{{session['name']}}</h4>
+        <h4>Dojo Location:{{session['location']}}</h4>
+        <h4>Favorite Language:{{session['language']}}</h4>
+        <h4>Comment:{{session['comment']}}</h4>
+        <form action='/'>
+          <input type='submit' id="button2" value='Go Back'>
+        </form>
+      </div>
+    </body>
+</html>

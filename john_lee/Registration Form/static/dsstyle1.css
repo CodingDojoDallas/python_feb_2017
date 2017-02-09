@@ -1,0 +1,19 @@
+#center{
+  height: 500px;
+  width: 600px;
+  margin: 0px auto;
+  border: solid 1px black;
+}
+form{
+  padding: 20px 30px;
+}
+#cbox{
+  width: 500px;
+  height: 100px;
+}
+#button{
+  background-color: #76A5AF;
+  color: white;
+  border: solid black 1px;
+  margin-left: 450px;
+}

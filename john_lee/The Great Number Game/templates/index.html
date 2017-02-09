@@ -1,0 +1,21 @@
+<html>
+    <head>
+       <title>Form Test Index</title>
+       <link rel='stylesheet' tye='type/css' href="{{url_for('static', filename='gngstyle.css')}}">
+    </head>
+    <body>
+      <div id="center">
+        <h1>Welcome to the Great Number Game!</h1>
+        <h3>I am thinking of a number between 1 and 100...</h3>
+        <h3>Take a guess!</h3>
+        <form action="/" method='post'>
+          <h3><input type='text' name='guess'></h3>
+          <h3><input type='submit' id="button" value='Submit'><h3>
+        </form>
+        <form action="/reset">
+          <h3><input type='submit' id="button" value='Reset'><h3>
+        </form>
+        <h1>{{session['gamestate']}}</h4>
+      </div>
+    </body>
+</html>

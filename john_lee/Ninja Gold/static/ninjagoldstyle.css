@@ -1,0 +1,47 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: black;
+  margin: 0px auto;
+}
+body h2{
+  color:gold;
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 0px;
+  margin-top: 10px;
+}
+#mygold{
+  width:70px;
+  height:30px;
+  background-color:white;
+  display: inline-block;
+  vertical-align: top;
+}
+#income{
+  width: 1000px;
+  height: 200px;
+}
+#income div{
+  width: 200px;
+  height: 200px;
+  padding: 10px 10px;
+  margin: 0px 5px;
+  border: solid 1px yellow;
+  color: gold;
+  display: inline-block;
+}
+h3{
+  margin-top:20px;
+  text-align: center;
+}
+h1{
+  color: gold;
+}
+#results{
+  width: 600px;
+  height: 200px;
+  background-color: white;
+}

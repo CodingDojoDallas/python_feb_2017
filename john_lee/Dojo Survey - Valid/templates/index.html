@@ -1,0 +1,38 @@
+<html>
+    <head>
+       <title>Form Test Index</title>
+       <link rel='stylesheet' tye='type/css' href="{{url_for('static', filename='dsstyle1.css')}}">
+    </head>
+    <body>
+      <div id="center">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <p>{{message}}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <form id="dsform" action='/results' method='post'>
+            <h3>Your Name: <input type='text' name='name'></h3>
+            <h3>Dojo Location:
+              <select name='location' form='dsform'>
+                <option value="Dallas">Dallas</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Other">Other</option>
+              </select>
+            </h3>
+            <h3>Favorite Language:
+              <select name='language' form='dsform'>
+                <option value="Python">Python</option>
+                <option value="Ruby">Ruby</option>
+                <option value="C++">C++</option>
+                <option value="Other">Other</option>
+              </select>
+            </h3>
+            <h3>Comment (optional): <input id="cbox" type="text" name='comment'></h3>
+            <input type='submit' id="button" value='Button'>
+        </form>
+      </div>
+    </body>
+</html>
