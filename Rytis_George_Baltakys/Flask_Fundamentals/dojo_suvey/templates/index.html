@@ -8,6 +8,15 @@
 <body>
 	<h1>Welcome to the Coding Dojo!</h1>
 	<p>Please take this quick survey</p>
+	<ul>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<li class="error">{{message}}</li>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+	</ul>
 	<form action="result" method="POST">
 		<label>
 			Your Name: <input type="text" name="name">

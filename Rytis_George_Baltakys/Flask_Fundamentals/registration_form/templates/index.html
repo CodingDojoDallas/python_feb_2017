@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Dojo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1>Welcome to the Coding Dojo!</h1>
+	<h3>Please register your account</h3>
+	<ul>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<li class="error">{{message}}</li>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+	</ul>
+	<form action="process" method="POST">
+		<label>
+			First Name: <input type="text" name="fname">
+		</label>
+		<label>
+			Last Name: <input type="text" name="lname">
+		</label>
+		<label>
+			Email: <input type="email" name="email">
+		</label>
+		<label>
+			Password: <input type="password" name="password">
+		</label>
+		<label>
+			Confirm Password: <input type="password" name="passwordc">
+		</label>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
