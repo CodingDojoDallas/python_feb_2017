@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{url_for("static" , filename="css/index.css")}}">
+</head>
+
+<body>
+    <h1><u>Submitted Info</u></h1>
+    <p>Name: {{data.name}}</p>
+    <p>Dojo Location: {{data.location}}</p>
+    <p>Favorite Language: {{data.favorite_language}}</p>
+    <p>Comment: {{data.comment}}</p>
+    <a href="/" class="alink">Go Back</a>
+</body>
+</html>
