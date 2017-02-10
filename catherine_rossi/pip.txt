@@ -1,0 +1,17 @@
+Practice your PIP Assignment
+Catherine Rossi 
+
+1.  I used pip to install Django from my terminal without difficulty
+2.  I then typed PIP list and received the following text: 
+click (6.7)
+Django (1.10.5)
+Flask (0.12)
+itsdangerous (0.24)
+Jinja2 (2.9.5)
+MarkupSafe (0.23)
+pip (6.1.1)
+setuptools (15.2)
+virtualenv (15.1.0)
+Werkzeug (0.11.15)
+3.  I attempted to re-install Django and received the following message: Requirement already satisfied 
+4. Pip and set up tools are in the freeze version 
