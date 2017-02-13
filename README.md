@@ -27,7 +27,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [Flask - Ninja Gold](https://www.youtube.com/watch?v=y9ud060bhhI "Flask - Ninja Gold") <br>
 [MySQL Workbench - ERDs & Queries](https://youtu.be/lDbMPBhMFWE "MySQL Workbench - ERDs & Queries")<br>
 [Flask + MySQL - Full Friends](https://www.youtube.com/watch?v=TGj9lp1hedc "Flask + MySQL - Full Friends")<br>
-
+[Flask + MySQL - Login/Registration with Bcrypt](https://www.youtube.com/watch?v=7cQEHtLnLS4 "Flask + MySQL - Login/Registration with Bcrypt")<br>
 
 # Schedule
 
