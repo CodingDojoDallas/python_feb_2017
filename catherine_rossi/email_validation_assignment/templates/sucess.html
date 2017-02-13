@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Success Page</title>
+</head>
+<body>
+	<h1>Success!!</h1>
+	<h1>The email you entered is a VALID email address.  Thank you! </h1>
+
+	
+	{{ all_emails }}
+	<h1>Email addresses entered:</h1>
+	<!-- the following with Jinja2-->
+	
+	{% for email in all_emails: %}
+   		<p>email:{{email["email"]}}</p>
+   		<hr>
+	{% endfor %}
+	
+</body>
+</html>
