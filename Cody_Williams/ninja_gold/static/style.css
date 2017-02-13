@@ -1,0 +1,21 @@
+.header h3{
+	display: inline-block;
+}
+.gold_tile{
+	border: 1px solid black;
+	margin-left: 10px;
+}
+.game_tile{
+	width: 22%;
+	border: 1px solid black;
+	margin: 5px;
+	padding: 5px;
+	height: 150px;
+	display: inline-block;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}

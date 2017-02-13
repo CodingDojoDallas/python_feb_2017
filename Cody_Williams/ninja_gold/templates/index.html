@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninja Gold</title>
+</head>
+<body>
+	<div>
+		<form action="/users" method="post">
+			<div>
+				<label>What is your name?</label>
+				<input type="text" name="name">
+			</div>
+			<div>
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+		    {% for message in messages %}
+		      <p class="error">{{ message }}</p>
+		    {% endfor %}
+		  {% endif %}
+		{% endwith %}
+	</div>
+</body>
+</html>
