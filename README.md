@@ -29,9 +29,6 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [Flask + MySQL - Full Friends](https://www.youtube.com/watch?v=TGj9lp1hedc "Flask + MySQL - Full Friends")<br>
 [Flask + MySQL - Login/Registration with Bcrypt](https://www.youtube.com/watch?v=7cQEHtLnLS4 "Flask + MySQL - Login/Registration with Bcrypt")<br>
 
-https://www.youtube.com/watch?v=7cQEHtLnLS4
-
-
 # Schedule
 
 **Daily Cadence:**
