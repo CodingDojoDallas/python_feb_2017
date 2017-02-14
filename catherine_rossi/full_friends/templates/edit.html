@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Edit Your Friend</title>
+</head>
+<body>
+	<h1>Friend Edit Form</h1>
+	<!-- To debug use {{ one_friend }}  is an object-->
+
+	<p>First Name: {{ one_friend['first_name'] }}</p>
+	<p>Last Name: {{ one_friend['last_name'] }}</p>
+	<p>Email: {{ one_friend['email'] }}</p>
+
+
+	<h2>Edit a Friend</h2>
+  <form action='/friends/{{one_friend["id"]}}' method='POST'>
+
+    <label for="first_name">
+      First Name:
+      <input type="text" name="first_name" id="first_name" value="{{ one_friend['first_name'] }}"> <!--to add the value in the text box-->
+    </label>
+
+    <label for="last_name">
+      Last Name:
+      <input type="text" name="last_name" id="last_name" value ="{{ one_friend['last_name'] }}">
+    </label>
+
+    <label for="email">
+      email:<input type="email" name="email" id="email" value ="{{ one_friend['email'] }}">
+    </label>
+
+    <input type="submit" value="SUBMIT">
+  </form>
+
+</body>
+</html>
