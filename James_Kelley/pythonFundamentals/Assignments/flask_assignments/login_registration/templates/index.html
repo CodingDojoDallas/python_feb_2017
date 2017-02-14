@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Registration</title>
+</head>
+<body>
+	<div>
+		<h1>Login</h1>
+		<form action="/session" method="post">
+		<div>
+			<label>Email</label>
+			<input type="text" name="email">
+		</div>
+
+		<div> 
+			<label>Password</label>
+			<input type="password" name="password">
+		</div>
+			<input type="submit" value="Login">
+		</form>
+	</div>
+	<div>
+		<h1>Register</h1>
+		<form action="/users" method="post">
+		<div>
+			<label>Email</label>
+			<input type="text" name="email">
+		</div>
+
+		<div>
+			<label>Password</label>
+			<input type="password" name="password">
+		</div>
+		<div> 
+			<label>Password Confirmation</label>
+			<input type="password" name="password_confirmation">
+		</div>
+			<input type="submit" value="Register">
+		</form>
+	</div>
+
+</body>
+</html>
