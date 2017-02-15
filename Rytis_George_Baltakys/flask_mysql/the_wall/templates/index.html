@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zencoder</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div>
+		<div class="headerLeft">
+			{% if 'user' in session %}
+				<h1>ZENCODER</h1>
+				<p>A place to be Zen</p>
+			{% else %}
+				<h1>Welcome to ZENCODER</h1>
+				<p>A place where you can be Zen while coding</p>
+			{% endif %}
+		</div>
+		{% if 'user' in session %}
+			<p class='user'>{{ session.user.fname }} {{ session.user.lname }} {{ session.user.email }} | <a href="/logout">logout</a></p>
+		{% endif %}
+	</div>
+
+	<ul class="error">
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<li>{{message}}</li>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+	</ul>
+
+	{% if 'user' in session %}
+		<div class="wall">
+			<div class="newPost">
+				<p>New Post</p>
+				<form action="/post" method="POST">
+					<textarea name="posting" cols="100" rows="6"></textarea>
+					<button type="submit">Post</button>
+				</form>
+			</div>
+			{% for post in posts %}
+				<div class='post' id='post{{post.id}}'>
+					<span>{{ post.fname }} {{ post.lname }} - {{ post.created_at.strftime('%b %e %G, %l:%M %p') }} - <a href="/post/{{post.id}}/delete">delete</a></span>
+					<p>{{ post.post }}</p>
+					{% for comment in post.comments %}
+						<div class='comment'>
+							<span>{{ comment.fname }} {{ comment.lname }} - {{ comment.created_at.strftime('%b %e %G, %l:%M %p') }} - <a href="/comment/{{comment.id}}/delete">delete</a></span>
+							<p>{{ comment.comment }}</p>
+						</div>
+					{% endfor %}
+					<form action="/comment" method="POST">
+						<textarea cols="80" rows="3" name='comment'></textarea>
+						<input type="hidden" name="postid" value="{{post.id}}">
+						<button type="submit">Comment</button>
+					</form>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	{% if not 'user' in session %}
+		<div class="login">
+			<form action="/login" method="POST">
+				<h2>Login</h2>
+				<label>
+					Email: <input type="email" name="email">
+				</label>
+				<label>
+					Password: <input type="password" name="pass">
+				</label>
+				<button type="submit">Log In</button>
+			</form>
+			<div class='verticalBorder'></div>
+			<form action="/register" method="POST">
+				<h2>Register</h2>
+				<label>
+					First Name: <input type="text" name="fname">
+				</label>
+				<label>
+					Last Name: <input type="text" name="lname">
+				</label>
+				<label>
+					Email: <input type="email" name="email">
+				</label>
+				<label>
+					Password: <input type="password" name="pass">
+				</label>
+				<label>
+					Confirm password: <input type="password" name="passc">
+				</label>
+				<button type="submit">Register</button>
+			</form>
+		</div>
+	{% endif %}
+</body>
+</html>

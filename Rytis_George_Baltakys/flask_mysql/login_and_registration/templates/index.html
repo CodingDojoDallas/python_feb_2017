@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zencoder</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div>
+		<div class="headerLeft">
+			{% if 'user' in session %}
+				<h1>ZENCODER</h1>
+				<p>A place to be Zen</p>
+			{% else %}
+				<h1>Welcome to ZENCODER</h1>
+				<p>A place where you can be Zen while coding</p>
+			{% endif %}
+		</div>
+		{% if 'user' in session %}
+			<p class='user'>{{ session.user.fname }} {{ session.user.lname }} {{ session.user.email }} | <a href="/logout">logout</a></p>
+		{% endif %}
+	</div>
+
+	{% if 'user' in session %}
+		<div class="content">
+			<h2>Welcome</h2>
+			<h2>You are In</h2>
+		</div>
+	{% endif %}
+
+	{% if not 'user' in session %}
+		<ul class="error">
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages %}
+						<li>{{message}}</li>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+		</ul>
+		<div class="login">
+			<form action="/login" method="POST">
+				<h2>Login</h2>
+				<label>
+					Email: <input type="email" name="email">
+				</label>
+				<label>
+					Password: <input type="password" name="pass">
+				</label>
+				<button type="submit">Log In</button>
+			</form>
+			<div class='verticalBorder'></div>
+			<form action="/register" method="POST">
+				<h2>Register</h2>
+				<label>
+					First Name: <input type="text" name="fname">
+				</label>
+				<label>
+					Last Name: <input type="text" name="lname">
+				</label>
+				<label>
+					Email: <input type="email" name="email">
+				</label>
+				<label>
+					Password: <input type="password" name="pass">
+				</label>
+				<label>
+					Confirm password: <input type="password" name="passc">
+				</label>
+				<button type="submit">Register</button>
+			</form>
+		</div>
+	{% endif %}
+</body>
+</html>

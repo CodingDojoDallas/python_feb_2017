@@ -1,0 +1,25 @@
+body {
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+}
+
+input {
+	padding: 5px;
+	width: 100px;
+}
+
+label {
+	display: block;
+	width:  300px;
+	text-align: right;
+	margin: 20px;
+}
+
+div {
+	margin: 20px;
+}
+
+.error {
+	color: red;
+}
