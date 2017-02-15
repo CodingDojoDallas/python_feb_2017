@@ -1,0 +1,28 @@
+Error:
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+Fix:
+Make sure db user password is correct
+
+
+Error:
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'rytis'@'localhost' (using password: YES)")
+Fix:
+Make sure db user is correct
+
+
+Error:
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (61)")
+Fix:
+Make sure db port is correct
+
+
+Error:
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1049, "Unknown database 'mydbnot'")
+Fix:
+Make sure db name is correct
+
+Error:
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2005, "Unknown MySQL server host 'nothost' (0)")
+
+Fix:
+Make sure the host is correct

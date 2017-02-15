@@ -1,0 +1,110 @@
+* {
+	/*border: 0px solid red;*/
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background: url('/static/img/zencoder.jpg') no-repeat left bottom fixed;
+	background-size: cover;
+	background-color: #B20B1D;
+	color: white;
+	font-family: sans-serif;
+	font-size: 18px;
+	text-shadow: 3px 3px 7px black;
+	font-weight: bold;
+}
+
+form {
+	display: inline-block;
+	margin: 40px;
+	vertical-align: middle;
+}
+
+input {
+	display: block;
+	background: rgba(58,75,103,0.7);
+	border: 1px solid rgba(58,75,103,0.8);
+	padding: 5px;
+	color: white;
+	font-size: 18px;
+	margin: 3px 0 16px 0;
+	box-shadow: 2px 2px 8px -3px black;
+}
+
+button {
+	color: white;
+	padding: 10px;
+	margin: 10px;
+	background: rgba(58,75,153,0.8);
+	border: 1px solid rgba(58,75,153,0.9);
+	font-size: 14px;
+	width: 100px;
+}
+
+h1 {
+	margin: 50px 50px 0 50px;
+	font-size: 42px;
+}
+
+.login h2 {
+	border-bottom: 2px solid lightblue;
+	display: inline-block;
+	padding: 0 50px 10px 0;
+}
+
+label {
+	display: block;
+}
+
+p {
+	margin: 5px 55px;
+}
+
+a {
+	text-decoration: none;
+	color: #f5b;
+}
+
+a:hover {
+	color: #f9b;
+}
+
+.headerLeft {
+	display: inline-block;
+}
+
+.user {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+
+.login {
+	display: block;
+	margin: 50px auto;
+	width: 600px;
+	background: radial-gradient(rgba(55,55,55,0.3) 69%, rgba(255,255,255,0.2));
+	border-radius: 20px;
+	padding: 0 40px;
+}
+
+.verticalBorder {
+	border-left: 3px solid rgba(248,196,155, 0.8);
+	display: inline-block;
+	height: 200px;
+	vertical-align: middle;
+}
+
+.error {
+	color: #fd9;
+	margin: 50px auto;
+	width: 600px;
+}
+
+.content {
+	width: 50%;
+	margin: 200px auto 0 auto;
+}

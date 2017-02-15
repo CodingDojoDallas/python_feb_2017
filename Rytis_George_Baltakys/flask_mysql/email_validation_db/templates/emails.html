@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success Page | Emails</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<p>The email address you entered ({{ email }}) is a VALID email address! Thank You! We have stored it in our records.</p>
+	<h3>Email Addresses Entered:</h3>
+	<ul>
+		{% for email in emails %}
+		<li>
+			{{ email['email'] }} {{ email['updated_at'] }} <a href="/delete/{{email['id']}}">delete</a>
+		</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>

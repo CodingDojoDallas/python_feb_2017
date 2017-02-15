@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friends</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1>These are all my friends!</h1>
+	<h2>Add a Friend</h2>
+	<form action='/friends' method='POST'>
+		<ul>
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages %}
+						<li class="error">{{message}}</li>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+		</ul>
+		<label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+		<label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+		<label for="occupation">Email:<input type="email" name="email" id="email"></label>
+		<input type="submit" value="Add">
+	</form>
+	<!-- we can use the line below to see all of our data in our template -->
+	<!-- {{ all_friends }} -->
+	
+	<!-- with all the data we can then construct a more structured output -->
+	{% for friend in all_friends: %}
+		 <p>ID: {{ friend['id'] }}</p>
+		 <p>First Name: {{ friend['first_name'] }}</p>
+		 <p>Last Name: {{ friend['last_name'] }}</p>
+		 <p>Email: {{ friend['email'] }}</p>
+		 <p>Updated at: {{ friend['updated_at'] }}</p>
+		 <p><a href="/friends/{{ friend['id'] }}/edit">edit friend</a></p>
+		 <p><a href="/friends/{{ friend['id'] }}/delete">delete friend</a></p>
+		 <hr>
+	{% endfor %}
+</body>
+</html>
