@@ -1,0 +1,14 @@
+.header_p{
+	display: inline-block;
+}
+.header_link{
+	display: inline-block;
+	float: right;
+}
+.time{
+	float: right;
+}
+.comment_text{
+	margin-left: 5%;
+	margin-right: 5%;
+}

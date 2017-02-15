@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div>
+		<div class="header">
+			<p class="header_p">Hello, {{data.current_user.name}}</p>
+			<a class="header_link" href="/logout">Logout</a>
+		</div>
+		<div class="row">
+			<form action="/messages" method="post">
+				<div>
+					<label>Post a Message</label>
+				</div>
+				<textarea name="message"></textarea>
+				<input type="submit" value="Post Message">
+			</form>
+		</div>
+		<div id="messages">
+			{% for message in data.messages %}
+				<p class="message_text"><span>{{message.message_user}} says: </span>{{message.message}} <span class="time">{{message.message_date.strftime('%A, %b %d')}}</span></p>
+				<div>
+					{% for comment in message.comments %}
+						<p class="comment_text"><span>{{comment.comment_user}} says: </span>{{comment.comment}} <span class="time">{{comment.comment_date.strftime('%A, %b %d')}}</span></p>
+					{% endfor %}
+				</div>
+				<div>
+					<form class="comment_text" action="/comments/{{message.message_id}}" method="post">
+						<div>
+							<label>Post a comment</label>
+						</div>
+						<textarea name="comment"></textarea>
+						<input type="submit" value="Post Comment">
+					</form>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>
