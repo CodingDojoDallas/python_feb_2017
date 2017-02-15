@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <title>Successful Registration</title>
+  <link rel='stylesheet' tye='type/css' href="{{url_for('static', filename='loginstyle.css')}}">
+</head>
+<body>
+  <div class="container">
+    <h1>Thanks {{ data.user[0].first_name}}! You successfully registered!</h1>
+    <a href='/'>Go back to Login</a>
+  </div>
+<body>
+</html>

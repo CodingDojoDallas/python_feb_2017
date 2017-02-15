@@ -1,0 +1,14 @@
+#centerbox{
+  height: 500px;
+  width: 600px;
+  padding: 20px 30px;
+  margin: 0px auto;
+  border: solid 1px black;
+}
+
+#button{
+  background-color: #76A5AF;
+  color: white;
+  border: solid black 1px;
+  margin-left: 450px;
+}

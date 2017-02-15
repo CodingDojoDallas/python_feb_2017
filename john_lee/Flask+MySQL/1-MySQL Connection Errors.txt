@@ -1,0 +1,8 @@
+Invalid port:
+	-Fixed on local connection
+Unknown variable SLAlchemy
+	-Fixed "from" and "import" to match correctly
+Syntax error, DATABASE_URI:
+	-Fixed syntaxt to "mysql://"
+Invalid query:
+	-Set result = self.db

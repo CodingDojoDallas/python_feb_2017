@@ -1,0 +1,43 @@
+Use twitter;
+SELECT * FROM users 
+WHERE id = 1 OR id = 2
+ORDER BY birthday DESC;
+
+INSERT INTO tweets (tweet, user_id, created_at, updated_at)
+VALUES ('helloo', 1, NOW(), NOW());
+
+UPDATE `twitter`.`users` SET `first_name`='John' WHERE `id`='1';
+
+Use lead_gen_business;
+
+SELECT clients.first_name, clients.last_name, billing.amount, billing.charged_datetime
+FROM clients
+JOIN billing ON clients.id = billing.clients_id;
+
+SELECT sites.domain_name, leads.first_name, leads.last_name
+FROM sites
+Join leads ON sites.id = leads.sites_id;
+
+SELECT clients.first_name AS clients_first, clients.last_name, sites.domain_name AS lead_first
+FROM clients
+JOIN sites ON clients.id = sites.clients_id
+JOIN leads ON sites.id = leads.sites_id;
+
+SELECT clients.first_name, clients.last_name, sites.domain_name
+FROM clients
+JOIN sites ON clients.id = sites.clients_id;
+
+SELECT clients.first_name, clients.last_name, SUM(billing.amount)
+FROM clients
+JOIN billing On clients.id = billing.clients_id
+GROUP BY clients.id;
+
+SELECT GROUP_CONCAT(sites.domain_name) AS domains, clients.first_name, clients.last_name
+FROM clients
+JOIN sites ON clients.id = sites.clients_id
+GROUP BY clients.id;
+
+SELECT COUNT(leads.id), sites.domain_name
+FROM sites
+JOIN leads ON sites.id = leads.sites_id
+GROUP BY site.id;

@@ -1,0 +1,25 @@
+<html>
+    <head>
+       <title>Login and Registration</title>
+       <link rel='stylesheet' tye='type/css' href="{{url_for('static', filename='loginstyle.css')}}">
+    </head>
+    <body>
+      <div>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <p>{{message}}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <form action='/submission' method='post'>
+          <label for="first_name"><h3>First Name: <input type='text' name='first_name' id="first_name"></h3></label>
+          <label for="last_name"><h3>Last Name: <input type='text' name='last_name' id="last_name"></h3></label>
+          <label for="email"><h3>Email: <input type='text' name='email' id="email"></h3></label>
+          <label for="password"><h3>Password: <input type='text' name='password' id="password"></h3></label>
+          <label for="password_confirm"><h3>Confirm Password: <input type='text' name='password_confirm' id="password_confirm"></h3></label>
+          <input type='submit' id="button_login" value='Submit'>
+        </form>
+      </div>
+    </body>
+</html>

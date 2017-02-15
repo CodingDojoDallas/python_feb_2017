@@ -1,0 +1,111 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+body{
+  background: url('city.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 0px auto;
+  height: 0px auto;
+}
+#userinfo{
+  width: 0px auto;
+  height: 50px;
+  background: rgba(0, 0, 0, .8);
+  border-bottom: solid 3px #262624;
+}
+#userinfo h4{
+  text-align: right;
+  color: white;
+}
+#userinfo h2{
+  display: inline-block;
+  text-align: left;
+  color: white;
+}
+a{
+  color: pink;
+}
+
+#posting{
+  width: 500px;
+  height: 150px;
+  margin: 0px auto;
+  margin-top: 15px;
+  padding: 20px 15px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  border: solid 3px #262624;
+}
+#posting h3{
+  color: white;
+}
+#button_home{
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 5px 5px;
+  display: block;
+  box-shadow: 2px 2px 4px grey;
+}
+
+#message{
+  width: 490px;
+  height: 100px;
+  margin: 3px 0px;
+  background: rgba(192, 192, 192, 0.5);
+}
+#postedmessages{
+  margin: 0px auto;
+  margin-top: 15px;
+  padding: 20px 20px;
+  width: 700px;
+  height: 0px auto;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  border: solid 3px #262624;
+}
+#postedmessages h3{
+  text-align:center;
+  padding: 10px 0px;
+}
+.individualpost{
+  width: 600px;
+  height: 0px auto;
+  margin: 5px 0px;
+}
+.individualpost form{
+  display:inline-block;
+}
+.comment{
+  width: 200px;
+  height: 0px auto;
+  background: rgba(192, 192, 192, 0.5);
+}
+#button_comment
+{
+  border-radius: 5px;
+  background-color: #555555;
+  color: white;
+  padding: 2px 2px;
+  display: inline-block;
+  box-shadow: 2px 2px 4px grey;
+}
+.individualcomment{
+  margin: 15px 0px 0px 40px;
+  width: 600px;
+  height: 40px;
+}
+.individualcomment form{
+  display:inline-block;
+}
+input, select, textarea{
+    color: #FFFFFF;
+}
+textarea:focus, input:focus {
+    color: #FFFFFF;
+}

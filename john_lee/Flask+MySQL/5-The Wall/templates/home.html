@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel='stylesheet' tye='type/css' href="{{url_for('static', filename='wallstyle.css')}}">
+</head>
+<body>
+  <div class="container">
+    <div id=userinfo>
+      <h2>The City Social Space</h2>
+      <h4>Welcome back {{ data.user[0].first_name }}  {<a href="/">Log Out</a>}</h4>
+    </div>
+    <div id="posting">
+      <h3>Post a message</h3>
+      <form action="/message" method='post'>
+        <label for="message"><input type="text" name="message" id="message"></label>
+        <input type="submit" id="button_home" value="Post a Message">
+      </form>
+    </div>
+    <div id="postedmessages">
+      <h3>Discussion</h3>
+      {% for message in data['messages']: %}
+        <div class="individualpost">
+
+          <h4>{{ message['user_first_name']}} {{ message['user_last_name']}} ( {{ message['updated_at'] }} )</h4>
+          <p>{{ message['message'] }}</p>
+
+          {% for comment in data['comments']: %}
+            {% if message['message_id'] == comment['message_id']: %}
+              <div class="individualcomment">
+                <h4>{{ comment['comments_first_name'] }} {{ comment['comments_last_name'] }} ( {{ comment['comments_updated'] }} )</h4>
+                <p>{{ comment['comment'] }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+          <form action="/comment" method='post'>
+            <label for="comment"><input type="text" name="comment" class="comment"></label>
+            <input type="hidden" name="message_id" value="{{ message['message_id'] }}">
+            <input type="submit" id="button_comment" value="Post a Comment">
+          </form>
+
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

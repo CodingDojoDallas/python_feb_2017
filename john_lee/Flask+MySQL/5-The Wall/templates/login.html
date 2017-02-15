@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel='stylesheet' tye='type/css' href="{{url_for('static', filename='loginstyle.css')}}">
+</head>
+<body>
+  <div class="container">
+    <h1>The City Social Space</h1>
+    <h2>Login</h2>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form action='/login' method='post'>
+      <h3><label for="email">Email: <input type='text' name='email' id="email"></label></h3>
+      <h3><label for="password">Password: <input type='text' name='password' id="password"></label></h3>
+      <h3><input type='submit' id="button_login" value='Submit'></h3>
+    </form>
+    <h2>New Users</h2>
+    <h3><a href='/register'>Create a New User</a></h3>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Edit a Friend</title>
+  </head>
+  <body>
+    <div>
+      <h2>Edit a Friend</h2>
+      {{data.friend[0].id}}
+      <form action='/friends/{{ data.friend[0].id }}' method='post'>
+        <div>
+          <label>Change your First name <input type="text" name="first_name" value={{ data.friend[0].first_name}}></label>
+          <label>Change your Last name <input type="text" name="last_name" value={{ data.friend[0].last_name}}></label>
+          <label>Change your Email <input type="text" name="email" value={{ data.friend[0].email}}></label>
+        </div>
+        <div>
+          <input type = "submit" value = "Update Friend">
+        </div>
+      </form>
+      <form action='/friends/{{ data.friend[0].id }}/delete' method='POST'>
+        <input type="submit" name="delete_user" value="Delete User">
+      </form>
+    </div>
+  </body>
+</html>
