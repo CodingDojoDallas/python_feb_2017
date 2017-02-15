@@ -28,6 +28,8 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MySQL Workbench - ERDs & Queries](https://youtu.be/lDbMPBhMFWE "MySQL Workbench - ERDs & Queries")<br>
 [Flask + MySQL - Full Friends](https://www.youtube.com/watch?v=TGj9lp1hedc "Flask + MySQL - Full Friends")<br>
 [Flask + MySQL - Login/Registration with Bcrypt](https://www.youtube.com/watch?v=7cQEHtLnLS4 "Flask + MySQL - Login/Registration with Bcrypt")<br>
+[Flask + MySQL - The Wall](https://www.youtube.com/watch?v=VvqTHQqZu1E "Flask + MySQL - The Wall")<br>
+[Python OOP - The Basics](https://www.youtube.com/watch?v=Yqi_-1HbnIg "Python OOP - The Basics")<br>
 
 # Schedule
 
