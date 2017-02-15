@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Friends</title>
+</head>
+<body>
+  	{{ all_friends }}
+	<h1>These are all my friends!</h1>
+	<!--  -->
+	
+	{% for friend in all_friends: %}
+   		<p>ID: {{ friend['id'] }}</p>
+   		<p>First Name: {{ friend['first_name'] }}</p>
+   		<p>Last Name: {{ friend['last_name'] }}</p>
+   		<p>Email: {{ friend['email'] }}</p>
+      <form action="/friends/{{ friend['id'] }}/edit" method = "GET"> <!--need to put id in Jinja format-->
+        <input type = "submit" name ="edit" value="Edit Friend"/>
+        
+      </form>
+
+      <form action="/friends/{{ friend['id'] }}/delete" method = "POST"> <!--need to put id in Jinja  format-->
+        <input type = "submit" name ="delete" value="Remove Friend"/>
+       </form>
+   		<hr>
+	{% endfor %}
+
+  <h2>Add a Friend</h2>
+  <form action='/friends' method='POST'>
+
+    <label for="first_name">
+      First Name:
+      <input type="text" name="first_name" id="first_name">
+    </label>
+
+    <label for="last_name">
+      Last Name:
+      <input type="text" name="last_name" id="last_name">
+    </label>
+
+    <label for="email">
+      email:<input type="email" name="email" id="email">
+    </label>
+
+    <input type="submit" value="SUBMIT">
+  </form>
+</body>
+</html>
