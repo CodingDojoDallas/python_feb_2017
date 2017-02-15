@@ -1,5 +1,8 @@
 # Assignment: Deck of Cards
 
+#### Create a card object constructor (aka blueprint):
+* What attributes does a card need to correctly identify it?
+
 #### Create a deck object constructor (aka blueprint). A deck should have the following functionality:
 * The Deck should contain the 52 standard cards.
 * The Deck should be able to shuffle.
