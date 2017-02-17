@@ -31,6 +31,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [Flask + MySQL - The Wall](https://www.youtube.com/watch?v=VvqTHQqZu1E "Flask + MySQL - The Wall")<br>
 [Python OOP - The Basics](https://www.youtube.com/watch?v=Yqi_-1HbnIg "Python OOP - The Basics")<br>
 [Python OOP - Deck of Cards](https://youtu.be/Bn7XovaCxqw "Python OOP - Deck of Cards")<br>
+[Django - Hello World](https://youtu.be/3SXbJVfvveg "Django - Hello World")<br>
 
 # Schedule
 
