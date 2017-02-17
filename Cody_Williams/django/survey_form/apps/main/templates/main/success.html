@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block title %}Survey Form{% endblock %}
+{% block body %}
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Location</th>
+		<th>Language</th>
+		<th>Comment</th>
+	</tr>
+	<tr>
+		<td>{{ request.session.name }}</td>
+		<td>{{ request.session.location }}</td>
+		<td>{{ request.session.language }}</td>
+		<td>{{ request.session.comment }}</td>
+	</tr>
+</table>
+{% endblock %}

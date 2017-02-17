@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block title %}Survey Form{% endblock %}
+{% block body %}
+	{% load static %}
+	<div>
+		Don't be like Rover
+	</div>
+		<form action="/surveys" method="post">
+		<!-- I must be in your form -->
+			{% csrf_token %}
+			<div>
+				<label>Name</label>
+				<input type="text" name="name">
+			</div>
+			<div>
+				<label>Dojo Location</label>
+				<select name="location">
+					{% for location in locations %}
+						<option>{{ location }}</option>
+					{% endfor %}
+				</select>
+			</div>
+				<label>Favorite Language</label>
+				<select name="language">
+					{% for language in languages %}
+						<option>{{ language }}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div>
+				<label>Comment:</label>
+			</div>
+			<div>
+				<textarea name="comment"></textarea>
+			</div>
+			<input type="submit" value="Submit">
+		</form>
+{% endblock %}
