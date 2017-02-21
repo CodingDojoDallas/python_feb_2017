@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="line">
+    <h3>Random Word (attempt #{{request.session.display_attempt}})</h3>
+    <div id="attempt">
+      <form action="/word" method="post">
+        {% csrf_token %}
+        <h1>{{request.session.display_generated}}</h1>
+        <input type="submit" value = "Generate">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
