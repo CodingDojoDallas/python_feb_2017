@@ -32,6 +32,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [Python OOP - The Basics](https://www.youtube.com/watch?v=Yqi_-1HbnIg "Python OOP - The Basics")<br>
 [Python OOP - Deck of Cards](https://youtu.be/Bn7XovaCxqw "Python OOP - Deck of Cards")<br>
 [Django - Hello World](https://youtu.be/3SXbJVfvveg "Django - Hello World")<br>
+[Django - Login/Registration](https://youtu.be/JAElMzA6iS0 "Login/Registration")<br>
 
 # Schedule
 
@@ -45,5 +46,5 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 
 **2pm** - Afternoon activities
 
-![schedule](https://dl.dropboxusercontent.com/u/46031414/schedule.png)
+![schedule](https://files.slack.com/files-pri/T0SSFD59P-F480PP56E/schedule3.png)
 
