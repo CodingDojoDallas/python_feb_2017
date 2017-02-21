@@ -46,5 +46,5 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 
 **2pm** - Afternoon activities
 
-![schedule](https://files.slack.com/files-pri/T0SSFD59P-F480PP56E/schedule3.png)
+![schedule](https://www.dropbox.com/s/pgkqvobujeyg9ca/schedule3.png?dl=0)
 
