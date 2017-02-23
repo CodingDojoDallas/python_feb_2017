@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+	<title>Belt Review</title>
+</head>
+<body>
+	<div class="container">
+		<h3>Login</h3>
+		<form action="/sessions" method="post">
+			{% csrf_token %}
+			<div>
+				<label>Email</label>
+				<input type="text" name="email">
+			</div>
+			<div>
+				<label>Password</label>
+				<input type="password" name="password">
+			</div>
+			<input type="submit" value="Login">
+		</form>
+		{% if messages %}
+			{% for message in messages %}
+				<p class="error">{{message}}</p>
+			{% endfor %}
+		{% endif %}
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+	<title>New Book</title>
+</head>
+<body>
+	<div>
+		<h3>Add a New Book and a Review</h3>
+		<form action="/books" method="post">
+			{% csrf_token %}
+			<div>
+				<label>Book Title</label>
+				<input type="text" name="title">
+			</div>
+			<div>
+				<label>Author</label>
+			</div>
+			<div>
+				<label>Choose from the list</label>
+				<select name="list_author">
+					<option disabled selected></option>
+					{% for author in authors %}
+						<option value="{{author.id}}">{{author.name}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div>
+				<label>Or add a new author</label>
+				<input type="text" name="new_author">
+			</div>
+			<div>
+				<label>Review</label>
+				<textarea name="review"></textarea>
+			</div>
+			<div>
+				<label>Score</label>
+				<input type="number" name="score" max="5" min="0">
+			</div>
+			<input type="submit" value="Create Review">
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+	<title></title>
+</head>
+<body>
+	<div>
+		<a href="/books_dashboard">Home</a>
+		<a href="/books/new">Add Book and Review</a>
+		<a href="/logout">Logout</a>
+	</div>
+	<div>
+		<p>Name: {{user.name}}</p>
+		<p>Email: {{user.email}}</p>
+		<p>Total Reviews: {{user.review_count}}</p>
+	</div>
+	<div>
+		{% for review in reviews %}
+			<p><a href="/books/{{review.book.id}}">{{review.book.title}}</a></p>
+		{% endfor %}
+	</div>
+</body>
+</html>
