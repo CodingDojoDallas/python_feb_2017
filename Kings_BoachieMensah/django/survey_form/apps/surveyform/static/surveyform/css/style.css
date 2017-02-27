@@ -1,0 +1,20 @@
+#container {
+  padding: 100px;
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+}
+
+label {
+  display: inline-block;
+  width: 6px;
+  margin-right: .5px;
+  padding-top: 1.5px;
+}
+
+input {
+  display: inline-block;
+  width: 6px;
+  position: relative;
+  top: -3px;
+}

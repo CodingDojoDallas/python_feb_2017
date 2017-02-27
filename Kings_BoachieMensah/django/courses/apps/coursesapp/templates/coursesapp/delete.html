@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Destroy Course</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    <div id="container">
+      <h2>Are you sure you want to delete the following course?</h2>
+      <h4>Name:</h4>
+      {{ course.course_name }}
+      <h4>Description:</h4>
+      {{ course.description }}
+      <form class="" action="/" method="post">
+        {% csrf_token %}
+        <input type="submit" name="no" value="No">
+      </form>
+      <form class="" action="/destroy/{{ course.id }}" method="post">
+        {% csrf_token %}
+        <input type="submit" name="yes" value="Yes! I want to delete this">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'first_app/css/style.css' %}" media="screen" title="no title">
+  </head>
+  <body>
+    <h1>The Greatest Form of All Time</h1>
+    {{ request.session.f_name }}
+    {{ request.session.l_name }}
+    <form class="" action="/new_user" method="post">
+      {% csrf_token %}
+      First Name:<input type="text" name="first_name" value="">
+      Last Name:<input type="text" name="last_name" value="">
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </body>
+</html>

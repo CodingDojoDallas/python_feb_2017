@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Gold</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    <div id="container">
+      Your Gold:<input type="text" name="your_gold" value="">
+      {{ request.session.your_gold }}
+
+      <h2>Farm</h2>
+      <h3>(earn 10 - 20 golds)</h3>
+      <form class="" action="/process_money" method="post">
+        {% csrf_token %}
+        <!-- <input type="hidden" name="farm" value="farm"> -->
+        <input type="submit" name="farm" value="Find Gold!">
+      </form>
+
+      <h2>Cave</h2>
+      <h3>(earn 5 - 10 golds)</h3>
+      <form class="" action="/process_money" method="post">
+        {% csrf_token %}
+        <!-- <input type="hidden" name="cave" value="cave"> -->
+        <input type="submit" name="cave" value="Find Gold!">
+      </form>
+
+      <h2>House</h2>
+      <h3>(earn 2 - 5 golds)</h3>
+      <form class="" action="/process_money" method="post">
+        {% csrf_token %}
+        <!-- <input type="hidden" name="house" value="house"> -->
+        <input type="submit" name="house" value="Find Gold!">
+      </form>
+
+      <h2>Casino</h2>
+      <h3>(earn/takes 0 - 50 golds)</h3>
+      <form class="" action="/process_money" method="post">
+        {% csrf_token %}
+        <!-- <input type="hidden" name="casino" value="casino"> -->
+        <input type="submit" name="casino" value="Find Gold!">
+      </form>
+
+      <h2>Activities:</h2>
+      <input type="text" name="activities" value="">
+      {{ request.session.won_gold }}
+      {{ request.session.lost_gold }}
+      {{ request.session.luck }}
+
+      <form class="" action="/process_money" method="post">
+        {% csrf_token %}
+        <input type="submit" name="reset_game" value="Reset">
+      </form>
+    </div>
+  </body>
+</html>

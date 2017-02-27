@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Login/Registration</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  </head>
+  <body>
+    <div id="container">
+      <h2>Welcome!</h2>
+      <div class="box">
+        <h3>Register</h3>
+          <form class="" action="/appointments" method="post">
+            {% csrf_token %}
+            <div class="box_items">
+              <label>Name:</label>
+              <input type="text" name="name" value="">
+            </div>
+            <div class="box_items">
+              <label>Email:</label>
+              <input type="text" name="email" value="">
+            </div>
+            <div class="box_items">
+              <label>Password:</label>
+              <input type="text" name="password" value="">
+            </div>
+            <div class="box_items">
+              <label>Confirm PW:</label>
+              <input type="text" name="confirm_pw" value="">
+            </div>
+            <div class="box_items">
+              <label>Date of Birth:</label>
+              <input type="date" name="dob" value="">
+            </div>
+            <div class="box_items">
+              <input type="submit" name="register" value="Register">
+            </div>
+          </form>
+      </div>
+      <div class="box">
+        <h3>Login</h3>
+          <form class="" action="/appointments" method="post">
+            {% csrf_token %}
+            <div class="box_items">
+              <label>Email:</label>
+              <input type="text" name="email" value="">
+            </div>
+            <div class="box_items">
+              <label>Password:</label>
+              <input type="text" name="password" value="">
+            </div>
+            <div class="box_items">
+              <input type="submit" name="login" value="Login">
+            </div>
+          </form>
+      </div>
+    </div>
+  </body>
+</html>

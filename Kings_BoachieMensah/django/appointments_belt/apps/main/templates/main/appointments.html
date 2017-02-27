@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>What's Up</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  </head>
+  <body>
+    <div id="container">
+      <h2>Hello, {{ request.session.name }}!</h2>
+        <div class="box">
+          <h3>Here are your appointments for today, {{ request.session.datetime }}:</h3>
+          <table>
+            <tr>
+              <th>Tasks</th>
+              <th>Time</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>{{ request.session.task }}</td>
+              <td>{{ time }}</td>
+              <td>{{ status }}</td>
+              <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <h3>Your Other appointments:</h3>
+          <table>
+            <tr>
+              <th>Tasks</th>
+              <th>Date</th>
+              <th>Time</th>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <h3>Add Appointment</h3>
+          <form class="" action="/" method="post">
+            {% csrf_token %}
+            <label>Date:</label>
+              <input type="text" name="date" value="">
+            <label>Time:</label>
+              <input type="text" name="time" value="">
+            <label>Tasks:</label>
+              <input type="text" name="tasks" value="">
+            <input type="submit" name="add" value="Add">
+          </form>
+        </div>
+    </div>
+  </body>
+</html>

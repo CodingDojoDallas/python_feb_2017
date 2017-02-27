@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Ninjas</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    <div id="container">
+      <img src="{{ request.session.images }}" alt="Picture of something">
+    </div>
+  </body>
+</html>
