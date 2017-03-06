@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <title>Quotes</title>
+    <!-- <link rel="stylesheet" href="{% static 'main/css/style.css' %}"> -->
+  </head>
+  <body>
+    <div id="container">
+      <div class="">
+        <p><a href="/logout">Logout</a></p>
+      </div>
+      <div class="">
+        <h1>Welcome, {{ current_user.name }}!</h1>
+      </div>
+      <div class="">
+        <h3>Quotable Quotes</h3>
+        {% for quote in quotes %}
+          <p>{{ quote.quoted_by }}: {{ quote.message }}</p>
+          <p>Posted by <a href="/users/{{ user_id }}">{{ quote.user.name }}</a></p>
+          <form class="" action="/add_favorite" method="post">
+            {% csrf_token %}
+            <input type="submit" name="add" value="Add to My List">
+          </form>
+        {% endfor %}
+      </div>
+      <div class="">
+        <h3>Your Favorites</h3>
+        {% for fav in favs %}
+          <p>{{ quote.quoted_by }}: {{ quote.message }}</p>
+          <p>Posted by <a href="/users/{{ user_id }}">{{ quote.user.name }}</a></p>
+          <form class="" action="/destroy_favorite" method="post">
+            {% csrf_token %}
+            <input type="submit" name="add" value="Remove From My List">
+          </form>
+        {% endfor %}
+      </div>
+      <div class="">
+        <h2>Contribute a Quote:</h2>
+        <form class="" action="/add_quote" method="post">
+          {% csrf_token %}
+          <div class="">
+            <label>Quoted By:</label>
+            <input type="text" name="quoted_by" value="">
+          </div>
+          <div class="">
+            <label>Message:</label>
+            <textarea name="message" rows="8" cols="40"></textarea>
+          </div>
+          <div class="">
+            <input type="submit" name="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </body>
+</html>
