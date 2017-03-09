@@ -32,7 +32,10 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [Python OOP - The Basics](https://www.youtube.com/watch?v=Yqi_-1HbnIg "Python OOP - The Basics")<br>
 [Python OOP - Deck of Cards](https://youtu.be/Bn7XovaCxqw "Python OOP - Deck of Cards")<br>
 [Django - Hello World](https://youtu.be/3SXbJVfvveg "Django - Hello World")<br>
+[Django - Layouts/Survey Form](https://www.youtube.com/watch?v=LD8HkE-e2tw "Django - Layouts/Survey Form")<br>
 [Django - Login/Registration](https://youtu.be/JAElMzA6iS0 "Login/Registration")<br>
+[Django - Sports ORM 2](https://www.youtube.com/watch?v=69vPUtGLwIo "Django - Sports ORM 2")<br>
+[Django - Belt Review](https://www.youtube.com/watch?v=4_OldlwAY_Y "Django - Belt Review")<br>
 
 # Schedule
 
