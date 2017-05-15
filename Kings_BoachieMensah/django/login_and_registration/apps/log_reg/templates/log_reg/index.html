@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Login and Registration</title>
+    <!-- <link rel="stylesheet" type = "text/css" href="{% static 'log_reg/style.css' %}"> -->
+  </head>
+  <body>
+    <div id="container">
+    <div class="box">
+      <h1>Registration</h1>
+      <form class="" action="/users" method="post">
+        {% csrf_token %}
+        <div class="">
+          <label>First Name:</label>
+          <input type="text" name="f_name" value="">
+        </div>
+        <div class="">
+          <label>Last Name:</label>
+          <input type="text" name="l_name" value="">
+        </div>
+        <div class="">
+          <label>Email:</label>
+          <input type="text" name="email" value="">
+        </div>
+        <div class="">
+          <label>Password:</label>
+          <input type="text" name="password" value="">
+        </div>
+        <div class="">
+          <label>Confirm Password:</label>
+          <input type="text" name="confirm_password" value="">
+        </div>
+          <input type="submit" name="register" value="Register">
+      </form>
+    </div>
+    <div class="box">
+      <h1>Login</h1>
+      <form class="" action="/sessions" method="post">
+        {% csrf_token %}
+        <div class="">
+          <label>Email:</label>
+          <input type="text" name="email" value="">
+        </div>
+        <div class="">
+          <label>Password:</label>
+          <input type="text" name="login_password" value="">
+        </div>
+            <input type="submit" name="login" value="Login">
+        </form>
+    </div>
+    </div>
+  </body>
+</html>

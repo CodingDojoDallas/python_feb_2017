@@ -1,0 +1,18 @@
+#container {
+  padding: 100px;
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+}
+
+label {
+  text-decoration: underline;
+}
+
+body {
+  display: inline-block;
+}
+
+h2 {
+  border: 2px solid black;
+}

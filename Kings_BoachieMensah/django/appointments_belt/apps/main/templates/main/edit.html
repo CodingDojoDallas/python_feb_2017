@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <title>Update Appointment</title>
+  </head>
+  <body>
+    <div id="container">
+      <form class="" action="/appointments" method="post">
+        {% csrf_token %}
+        <div class="">
+          <label>Tasks:</label>
+          <input type="text" name="tasks" value="">
+        </div>
+        <div class="">
+          <label>Status:</label>
+          <option value="pending">Pending</option>
+          <option value="missed">Missed</option>
+        </div>
+        <div class="">
+          <label>Date:</label>
+          <input type="date" name="date" value="">
+        </div>
+        <div class="">
+          <label>Time:</label>
+          <input type="time" name="time" value="">
+        </div>
+        <input type="submit" name="update" value="Update">
+      </form>
+    </div>
+  </body>
+</html>

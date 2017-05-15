@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <title>User Page</title>
+    <!-- <link rel="stylesheet" href="{% static 'main/css/style.css' %}"> -->
+  </head>
+  <body>
+    <div id="container">
+      <div class="">
+        <p><a href="/quotes">Dashboard</a></p>
+        <p><a href="/logout">Logout</a></p>
+      </div>
+      <div class="">
+        <p>Posts by {{ quote.user.name }}</p>
+        <p>Count: .count</p>
+
+        {{ quote.quoted_by }}: {{ quote.message }}
+      </div>
+    </div>
+  </body>
+</html>
